@@ -12,10 +12,7 @@ struct ContentView: View {
         ZStack{
             Image("background").resizable().edgesIgnoringSafeArea(.all)
             VStack {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundColor(.accentColor)
-                Text("Hello, world!")
+                Image("diceeLogo")
             }
         }
         
