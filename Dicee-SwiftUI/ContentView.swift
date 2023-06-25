@@ -13,7 +13,7 @@ struct ContentView: View {
             Image("background").resizable().edgesIgnoringSafeArea(.all)
             VStack {
                 Image("diceeLogo")
-                DiceView()
+                DiceView(n: 1)
             }
         }
         
@@ -21,8 +21,9 @@ struct ContentView: View {
 }
 
 struct DiceView: View {
+    let n: Int
     var body: some View {
-        Image("dice1").resizable().scaledToFit().aspectRatio(contentMode: .fit)
+        Image("dice\(n)").resizable().scaledToFit().aspectRatio(contentMode: .fit)
     }
 }
 
