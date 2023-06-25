@@ -13,12 +13,13 @@ struct ContentView: View {
             Image("background").resizable().edgesIgnoringSafeArea(.all)
             VStack {
                 Image("diceeLogo")
-                
+                Spacer()
                 HStack {
                     DiceView(n: 1)
                     DiceView(n: 1)
                 }
                 .padding()
+                Spacer()
                 Button(action: {
                     print("on press")
                 }) {
@@ -29,6 +30,7 @@ struct ContentView: View {
                 }
                 .background(Color.red)
             }
+            .padding(.bottom)
         }
         
     }
