@@ -13,9 +13,16 @@ struct ContentView: View {
             Image("background").resizable().edgesIgnoringSafeArea(.all)
             VStack {
                 Image("diceeLogo")
+                DiceView()
             }
         }
         
+    }
+}
+
+struct DiceView: View {
+    var body: some View {
+        Image("dice1").resizable().scaledToFit().aspectRatio(contentMode: .fit)
     }
 }
 
@@ -24,3 +31,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
