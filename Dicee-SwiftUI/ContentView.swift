@@ -13,11 +13,21 @@ struct ContentView: View {
             Image("background").resizable().edgesIgnoringSafeArea(.all)
             VStack {
                 Image("diceeLogo")
+                
                 HStack {
                     DiceView(n: 1)
                     DiceView(n: 1)
                 }
                 .padding()
+                Button(action: {
+                    print("on press")
+                }) {
+                    Text("Roll")
+                        .font(.system(size: 50,weight: .heavy))
+                        .foregroundColor(.white)
+                        .padding(.horizontal)
+                }
+                .background(Color.red)
             }
         }
         
@@ -27,7 +37,11 @@ struct ContentView: View {
 struct DiceView: View {
     let n: Int
     var body: some View {
-        Image("dice\(n)").resizable().scaledToFit().aspectRatio(contentMode: .fit)
+        Image("dice\(n)")
+            .resizable()
+            .scaledToFit()
+            .aspectRatio(contentMode: .fit)
+            .padding()
     }
 }
 
