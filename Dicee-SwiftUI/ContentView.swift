@@ -13,7 +13,11 @@ struct ContentView: View {
             Image("background").resizable().edgesIgnoringSafeArea(.all)
             VStack {
                 Image("diceeLogo")
-                DiceView(n: 1)
+                HStack {
+                    DiceView(n: 1)
+                    DiceView(n: 1)
+                }
+                .padding()
             }
         }
         
