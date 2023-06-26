@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var leftDiceNumber = 1
+    var rightDiceNumber = 1
+    
     var body: some View {
         ZStack{
             Image("background").resizable().edgesIgnoringSafeArea(.all)
@@ -15,8 +19,8 @@ struct ContentView: View {
                 Image("diceeLogo")
                 Spacer()
                 HStack {
-                    DiceView(n: 1)
-                    DiceView(n: 1)
+                    DiceView(n: leftDiceNumber)
+                    DiceView(n: rightDiceNumber)
                 }
                 .padding()
                 Spacer()
